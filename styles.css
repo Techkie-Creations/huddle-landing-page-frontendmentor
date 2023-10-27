@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+/* GLOBALS */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("./images/bg-desktop.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: hsl(257, 40%, 49%);
+	transition: background-image 1s;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+}
+
+/* MAIN */
+
+.main {
+	width: 100%;
+	padding: 2rem 3rem;
+}
+
+.main .hero {
+	display: flex;
+	gap: 3rem;
+	margin: 6rem 0;
+	transition: flex-direction 1s;
+}
+
+/* ILLUSTRATION */
+
+.main .hero .hero-img {
+	width: 50%;
+	transition: width 1s;
+}
+
+/* TEXT */
+
+.main .hero .info {
+	color: white;
+}
+
+.main .hero .info h1 {
+	font-size: calc(100% * 2);
+	font-family: "Poppins", sans-serif;
+	font-family: 600;
+}
+
+.main .hero .info p {
+	font-size: 18px;
+	font-family: "Open Sans";
+}
+
+/* BUTTON */
+
+.main .hero .info button {
+	width: 11rem;
+	height: 2.5rem;
+	border: none;
+	border-radius: 1.5rem;
+	box-shadow: -0.5px 1px 5px black;
+	cursor: pointer;
+	font-size: 16px;
+	color: hsl(257, 40%, 49%);
+	transition: width 1s;
+}
+
+.main .hero .info button:hover {
+	background-color: hsl(300, 69%, 71%);
+	color: white;
+}
+
+.main .hero .info button:active {
+	scale: 0.9;
+	box-shadow: none;
+}
+
+/* SOCIAL ICONS */
+
+.social {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1rem;
+}
+
+.social .fa-brands {
+	color: white;
+	font-size: calc(100% * 1.5);
+	border: 0.15rem solid white;
+	padding: 0.7rem;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.social .fa-brands:hover {
+	border: 0.15rem solid hsl(323, 75%, 65%);
+	color: hsl(323, 75%, 65%);
+}
+
+/* FOOTER */
+
+footer {
+	text-align: center;
+	color: white;
+}
+
+footer .avatar {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	object-position: 0rem 0.01rem;
+	object-fit: cover;
+}
+
+footer .attribution a {
+	text-decoration: none;
+	color: hsl(300, 69%, 71%);
+}
+
+footer .attribution a:hover {
+	color: darkred;
+}
+
+footer p.copy {
+	font-weight: 700;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 800px) {
+	.main .hero {
+		flex-direction: column;
+	}
+
+	.main .hero .hero-img {
+		width: 100%;
+	}
+
+	.main .hero {
+		text-align: center;
+	}
+
+	.main .hero .info button {
+		width: 50%;
+	}
+
+	.social {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		background-image: url("./images/bg-mobile.svg");
+	}
+
+	.main .hero .info button {
+		width: 70%;
+	}
+}
